@@ -1,0 +1,16 @@
+{
+  "name": "kie-ai-helpers",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.2.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "fastify": "^5.5.0"
+  }
+}
