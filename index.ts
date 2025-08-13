@@ -19,7 +19,7 @@ fastify.get('/', async (request, reply) => {
 fastify.post('/generate', async (request, reply) => {
     try {
         const { body: { prompt } } = request as any;
-        const response = await fetch(url, { ...options, body: JSON.stringify({ "prompt": prompt, "model": "veo3" }) });
+        const response = await fetch(url, { ...options, body: JSON.stringify({ "prompt": prompt, "model": "veo3_fast" }) });
         const data = await response.json();
         return reply.send(data);
     } catch (error) {
