@@ -12,7 +12,11 @@ const fastify = Fastify({
     logger: true
 })
 
-fastify.post('/', async (request, reply) => {
+fastify.get('/', async (request, reply) => {
+    return reply.send('Hello World!')
+})
+
+fastify.post('/generate', async (request, reply) => {
     try {
         const { body: { prompt } } = request as any;
         const response = await fetch(url, { ...options, body: JSON.stringify({ "prompt": prompt, "model": "veo3" }) });
